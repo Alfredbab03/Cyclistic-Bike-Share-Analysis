@@ -1,0 +1,34 @@
+# Tableau Calculated Fields (Data Type Troubleshooting)
+
+During the visualization phase, Tableau defaulted to reading specific duration metrics as Date/Time strings rather than continuous measures. To accurately plot the data on continuous axes and integrate it into tooltips, I engineered the following calculated fields directly in Tableau:
+
+1. **Converting Date/Time to Continuous Minutes**
+*(Used to convert `average_ride_length` from HH:MM:SS to a plotted decimal)*
+```tableau
+(DATEPART('hour', [average_ride_length]) * 60) + 
+DATEPART('minute', [average_ride_length]) + 
+(DATEPART('second', [average_ride_length]) / 60)
+
+2. **Converting String Text to Continuous Minutes**
+(Used to bypass the 24-hour limit in Tableau's Date/Time recognition for longest_ride)
+
+Code snippet
+(INT(SPLIT([longest_ride], ':', 1)) * 60) + 
+INT(SPLIT([longest_ride], ':', 2)) + 
+(INT(SPLIT([longest_ride], ':', 3)) / 60)
+
+3. **Categorical Axis Formatting**
+(Used to translate the raw numerical output of day_of_week into readable text for the weekly trend line graph)
+
+Code snippet
+CASE [day_of_week]
+    WHEN 1 THEN 'Sunday'
+    WHEN 2 THEN 'Monday'
+    WHEN 3 THEN 'Tuesday'
+    WHEN 4 THEN 'Wednesday'
+    WHEN 5 THEN 'Thursday'
+    WHEN 6 THEN 'Friday'
+    WHEN 7 THEN 'Saturday'
+END
+
+***
