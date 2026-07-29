@@ -47,6 +47,8 @@ Based on the data visualizations, casual riders use the service for long-duratio
 2. **Shift Marketing Copy to Emphasize "Duration Savings":** Casual riders spend nearly twice as much time on the bikes per trip (averaging ~21.8 minutes) compared to annual members (~12.5 minutes). Marketing campaigns should mathematically prove how an annual membership eliminates per-minute surcharges, saving them money on their long weekend rides.
 3. **Implement Post-Ride "Upgrade" Notifications (Driven by Volume & Duration):** Combining the high-volume weekend trend with the long-duration habits of casual riders, Cyclistic should trigger targeted in-app conversion prompts. Whenever a casual user completes a trip exceeding 20 minutes on a Saturday or Sunday, the app should instantly notify them of the exact cost savings they would have achieved had they been on an annual membership.
 
+📈 [View the Live Cyclistic Executive Presentation (Google Slides) Here](https://docs.google.com/presentation/d/171ttrcxwJmjkoVtkly1oyQ84UBqYXKYYsI3iY4gEUQ4/edit?usp=sharing)
+
 ## Measuring Success (KPIs)
 To track the effectiveness of these marketing strategies, the data analytics team should monitor the following Key Performance Indicators (KPIs) post-launch:
 * **Casual-to-Member Conversion Rate:** Track the overall trip volume ratio month-over-month to see if the current ~65/35 (Member/Casual) split shifts toward a higher percentage of member rides.
