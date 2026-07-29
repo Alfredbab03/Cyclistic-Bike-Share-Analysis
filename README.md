@@ -33,7 +33,8 @@ To ensure the final executive presentation remained highly focused on the "Commu
 ## Data Visualization
 The aggregated SQL data was exported to Tableau to build an interactive dashboard showcasing the volume, duration, and weekly trends of both user groups.
 
-### Tableau Data Type Conversions [view the formulated field snippet here] Tableau Calculated Field Snippet.txt
+### Tableau Data Type Conversions [view the formulated field snippet here] 
+(Tableau Calculated Field Snippet.txt)
 During the visualization phase, Tableau defaulted to reading specific duration metrics as Date/Time strings rather than continuous measures. To accurately plot the data on continuous axes and integrate it into tooltips, I engineered several calculated fields. These formulas were used to convert Date/Time formats to continuous decimal minutes, bypass 24-hour limits on string text, and format categorical axes.
 
 📊 [View the interactive Tableau Dashboard here] (https://public.tableau.com/views/Cyclistic_Bike_Share_Analysis_2026_17852897098680/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
