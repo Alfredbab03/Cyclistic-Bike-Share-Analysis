@@ -19,7 +19,7 @@ To ensure high data integrity before analysis, I used SQL to process and clean t
 ## Primary Aggregations (Used in Visualizations)
 The core narrative of the analysis was driven by aggregating ride volume, average ride length, and day-of-week trends grouped by user type. These highly aggregated outputs (`The high level overview (Member vs Causal).csv` and `weekly_trend_summary.csv`) were exported specifically to power the final Tableau dashboard.
 
-## Secondary Aggregations (Excluded from Final Visualizations)
+### Secondary Aggregations (Excluded from Final Visualizations)
 To ensure the final executive presentation remained highly focused on the "Commuter vs. Cruiser" dynamic, four additional exploratory aggregations were executed in SQL but deliberately omitted from the final visual dashboard to prevent clutter and maintain accessibility:
 
 1. **Monthly Seasonality Trends:** Aggregated total rides by month. (Confirmed a massive drop in winter usage and a peak in July for both user types).
@@ -31,7 +31,10 @@ To ensure the final executive presentation remained highly focused on the "Commu
 4. **Rideable Type Preferences:** Grouped by classic vs. electric bikes. (Showed baseline preferences but did not significantly impact the membership conversion strategy).
 
 ## Data Visualization
-The aggregated SQL data was exported to Tableau to build an interactive dashboard showcasing the volume, duration, and weekly trends of both user groups. 
+The aggregated SQL data was exported to Tableau to build an interactive dashboard showcasing the volume, duration, and weekly trends of both user groups.
+
+### Tableau Data Type Conversions
+During the visualization phase, Tableau defaulted to reading specific duration metrics as Date/Time strings rather than continuous measures. To accurately plot the data on continuous axes and integrate it into tooltips, I engineered several calculated fields. These formulas were used to convert Date/Time formats to continuous decimal minutes, bypass 24-hour limits on string text, and format categorical axes.
 
 📊 [View the interactive Tableau Dashboard here] (https://public.tableau.com/views/Cyclistic_Bike_Share_Analysis_2026_17852897098680/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
